@@ -13,10 +13,10 @@ class Comp(BoxLayout):
         pr2 = float(self.ids.pr2.text)
         ps2 = float(self.ids.ps2.text)
 
-        self.ids.p1.text = str(pr1 / ps1 * 1000)
-        self.ids.p2.text = str(pr2 / ps2 * 1000)
+        self.ids.p1.text = f'{(pr1 / ps1 * 1000):.2f}'
+        self.ids.p2.text = f'{(pr2 / ps2 * 1000):.2f}'
 
-        self.ids.dif.text = str((pr1 / ps1) / (pr2 / ps2) * 100) + ' %'
+        self.ids.dif.text = f'{((pr1 / ps1) / (pr2 / ps2) * 100):.0f} %'
 
 
 class Comparador(App):
